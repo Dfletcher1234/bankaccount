@@ -17,9 +17,9 @@ class BankAccount
   end
 
   def self.interest_time
-    sum = 0
-    @@accounts.each do |account|
+     @@accounts.each do |account|
       account.balance *= @@interest_rate
+
     end
   end
 
@@ -41,7 +41,7 @@ class BankAccount
   end
 
   def withdraw(withdraw_amount)
-  @balace -= withdraw_amount
+  @balance -= withdraw_amount
   end
 end
 
@@ -52,4 +52,7 @@ p BankAccount.total_funds
 p my_account.deposit(200)
 p my_account.balance
 p BankAccount.total_funds
-p BankAccount.interest_time
+BankAccount.interest_time
+p my_account.withdraw(70)
+p my_account.balance
+p BankAccount.total_funds
